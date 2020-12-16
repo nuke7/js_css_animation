@@ -2,6 +2,7 @@
 
 function pageLoaded() {
   var root = document.querySelector("#root");
+  var body = document.querySelector("body");
   var myObjects = [{
     tag: "h1",
     content: "Marton Gombos"
@@ -15,7 +16,7 @@ function pageLoaded() {
     root.insertAdjacentHTML("beforeend", "<".concat(myObject.tag, "> ").concat(myObject.content, " </").concat(myObject.tag, ">"));
   }
 
-  root.addEventListener("mouseover", function () {
+  window.addEventListener("click", function () {
     root.classList.toggle("clicked");
   });
 }

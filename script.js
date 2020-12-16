@@ -1,5 +1,6 @@
 function pageLoaded() {
   let root = document.querySelector("#root");
+  let body = document.querySelector("body");
 
   let myObjects = [
     {
@@ -19,7 +20,7 @@ function pageLoaded() {
     );
   }
 
-  root.addEventListener("mouseover", function () {
+  window.addEventListener("click", function () {
     root.classList.toggle("clicked");
   });
 }

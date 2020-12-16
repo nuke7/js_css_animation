@@ -30,15 +30,17 @@ body {
 
   &.clicked {
     h1 {
-      animation-name: twist;
-      animation-duration: 2s;
+      animation-name: twist-slow;
+      animation-duration: 3s;
       animation-direction: normal;
+      animation-iteration-count: infinite;
     }
 
     p {
       animation-name: twist;
       animation-duration: 2s;
       animation-direction: reverse;
+      animation-iteration-count: infinite;
     }
 
     @keyframes twist {
@@ -47,6 +49,20 @@ body {
       }
 
       to {
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
+    }
+
+    @keyframes twist-slow {
+      0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+
+      75% {
+        transform: translate(-50%, -50%) rotate(90deg);
+      }
+
+      100% {
         transform: translate(-50%, -50%) rotate(360deg);
       }
     }
